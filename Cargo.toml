@@ -1,0 +1,21 @@
+[package]
+name = "velvetio"
+version = "0.1.0"
+edition = "2024"
+authors = ["Arton Hunter <arton.hunter@gmail.com>"]
+description = "Simple and elegant CLI input for Rust - no more stdin().read_line() pain"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/hunter-arton/velvetio"
+homepage = "https://github.com/hunter-arton"
+readme = "README.md"
+keywords = ["cli", "input", "terminal", "prompt", "interactive"]
+categories = ["command-line-interface", "development-tools"]
+exclude = ["/.github", "/docs"]
+
+[dependencies]
+# Actually zero dependencies!
+
+
+[[example]]
+name = "setup_wizard"
+required-features = []
