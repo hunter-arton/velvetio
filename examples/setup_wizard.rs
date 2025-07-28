@@ -37,19 +37,18 @@ fn main() {
         ["AWS", "Google Cloud", "Azure", "Digital Ocean", "None"]
     );
 
+    let choices = &[
+        "Rust",
+        "Python",
+        "JavaScript",
+        "Go",
+        "Java",
+        "C++",
+        "TypeScript",
+    ];
+
     // multi_select! macro - multiple choices
-    let languages = multi_select!(
-        "Programming languages used",
-        [
-            "Rust",
-            "Python",
-            "JavaScript",
-            "Go",
-            "Java",
-            "C++",
-            "TypeScript"
-        ]
-    );
+    let languages = multi_select!("Programming languages used", choices);
 
     let databases = multi_select!(
         "Databases needed",

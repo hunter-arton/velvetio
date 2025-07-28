@@ -95,6 +95,10 @@ macro_rules! choose {
     ($prompt:expr, [$($choice:expr),+ $(,)?]) => {
         $crate::choose($prompt, &[$($choice),+])
     };
+
+    ($prompt:expr, $choices:expr) => {
+        $crate::choose($prompt, $choices.as_ref())
+    };
 }
 
 #[macro_export]
@@ -102,6 +106,11 @@ macro_rules! multi_select {
     ($prompt:expr, [$($choice:expr),+ $(,)?]) => {
         $crate::multi_select($prompt, &[$($choice),+])
     };
+
+    ($prompt:expr, $choices:expr) => {
+        $crate::multi_select($prompt, $choices.as_ref())
+    };
+
 }
 
 /// Quick form macro for simple cases
