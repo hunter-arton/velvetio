@@ -91,7 +91,7 @@ pub fn confirm(prompt: &str) -> bool {
 /// Pick one option from a list
 pub fn choose<T>(prompt: &str, choices: &[T]) -> T
 where
-    T: std::fmt::Display + Clone,
+    T: std::fmt::Display + Clone + AsRef<str>,
 {
     if choices.is_empty() {
         panic!("Cannot choose from empty list");
@@ -116,7 +116,7 @@ where
 /// Pick multiple options from a list
 pub fn multi_select<T>(prompt: &str, choices: &[T]) -> Vec<T>
 where
-    T: std::fmt::Display + Clone,
+    T: std::fmt::Display + Clone + AsRef<str>,
 {
     if choices.is_empty() {
         return Vec::new();
